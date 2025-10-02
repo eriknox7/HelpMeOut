@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="10dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Service Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:paddingBottom="10dp"/>
+
+        <!-- Store Name -->
+        <EditText
+            android:id="@+id/et_store_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Store Name"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <!-- Opening Time -->
+        <EditText
+            android:id="@+id/et_opening_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opening Time (e.g. 9:00 AM)"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <!-- Closing Time -->
+        <EditText
+            android:id="@+id/et_closing_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Closing Time (e.g. 10:00 PM)"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <!-- Extra Fields (Dynamic) -->
+        <LinearLayout
+            android:id="@+id/layout_dynamic_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/teal_700"
+                android:padding="8dp" />
+
+            <View android:layout_width="10dp" android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:padding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Service Image -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="13dp"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/white">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_service_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/card_border"
+                app:riv_corner_radius="12dp"
+                app:riv_border_width="2dp"
+                app:riv_border_color="@color/gray"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Store Name -->
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingTop="10dp"
+            android:gravity="center" />
+
+        <!-- Owner Name -->
+        <TextView
+            android:id="@+id/tv_owner_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Owner: John Doe"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="5dp" />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone: +91 9876543210"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="5dp" />
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address: XYZ Street, City, Country"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:paddingTop="5dp" />
+
+        <!-- Opening & Closing Time -->
+        <TextView
+            android:id="@+id/tv_timing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open: 9:00 AM - 10:00 PM"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:paddingTop="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                android:layout_marginEnd="8dp"
+                style="?android:attr/ratingBarStyleSmall" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="@string/_4_5_5" />
+
+        </LinearLayout>
+
+        <!-- Extra Dynamic Fields -->
+        <TextView
+            android:id="@+id/tv_extra_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="@android:color/holo_blue_dark"
+            android:paddingTop="10dp"
+            android:text="Extra Info: WiFi Available, AC Seating, Home Delivery" />
+
+        <!-- Open Google Maps Button -->
+        <Button
+            android:id="@+id/btn_open_map"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Open Location"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/baseline_map_24"
+            android:padding="8dp"
+            android:layout_marginTop="10dp" />
+
+        <!-- Call & WhatsApp Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/btn_call"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Call"
+                android:textSize="16sp"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/baseline_call_24"
+                android:padding="8dp" />
+
+            <View android:layout_width="10dp" android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_whatsapp"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="WhatsApp"
+                android:textSize="16sp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/ic_whatsapp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- Edit & Delete Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/baseline_edit_24"
+                android:padding="8dp" />
+
+            <View android:layout_width="10dp" android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/baseline_delete_forever_24"
+                android:padding="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

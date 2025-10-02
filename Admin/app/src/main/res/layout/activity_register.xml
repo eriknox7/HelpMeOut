@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".RegisterActivity">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_centerHorizontal="true"
+       android:gravity="center"
+       >
+
+       <TextView
+           android:id="@+id/textView4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/text1"
+           android:textColor="@color/dark_gray"
+           android:textSize="20sp"
+           android:layout_marginBottom="15dp"
+           android:textStyle="bold"
+           />
+
+       <TextView
+           android:id="@+id/textView5"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/text2"
+           android:textColor="@color/black"
+           android:textSize="16sp"
+           android:layout_marginBottom="18dp"
+           />
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/stroked"
+           android:hint="@string/name"
+           android:minHeight="48dp"
+           android:padding="10dp"
+           android:textSize="20sp"
+          />
+
+       <EditText
+           android:id="@+id/email"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="26dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/stroked"
+           android:ems="10"
+           android:hint="@string/email"
+           android:importantForAutofill="no"
+           android:inputType="textEmailAddress"
+           android:minHeight="48dp"
+           android:padding="10dp"
+           />
+
+       <EditText
+           android:id="@+id/phone"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="26dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/stroked"
+           android:hint="@string/mobile"
+           android:importantForAutofill="no"
+           android:inputType="number"
+           android:minHeight="48dp"
+           android:padding="10dp"
+           android:textColor="@color/black"
+           android:textSize="20sp"
+          />
+
+       <EditText
+           android:id="@+id/password"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="28dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/stroked"
+           android:hint="@string/password"
+           android:importantForAutofill="no"
+           android:inputType="textPassword"
+           android:minHeight="48dp"
+           android:padding="10dp"
+           android:textColor="@color/black"
+        />
+
+       <EditText
+           android:id="@+id/repassword"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="28dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/stroked"
+           android:hint="Re-password"
+           android:importantForAutofill="no"
+           android:inputType="textPassword"
+           android:minHeight="48dp"
+           android:padding="10dp"
+           android:textColor="@color/black"
+           />
+
+       <Button
+           android:id="@+id/login_button"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="39dp"
+           android:layout_marginEnd="25dp"
+           android:background="@drawable/darkgrey_rounded_corner"
+           android:text="Sign Up"
+           android:textColor="@color/white"
+           android:textSize="20sp"
+           android:textAllCaps="false"
+           />
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/textView6"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:layout_weight="1"
+               android:text="@string/text3"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               android:textStyle="bold"
+              />
+
+           <TextView
+               android:id="@+id/login"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:layout_marginLeft="14dp"
+               android:text="Sign in"
+               android:textColor="@color/purple_700"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               />
+
+       </LinearLayout>
+
+
+
+       <ProgressBar
+           android:id="@+id/progressbar"
+           style="?android:attr/progressBarStyle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.498"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.862" />
+
+   </LinearLayout>
+
+
+</RelativeLayout>
